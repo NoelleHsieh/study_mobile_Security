@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">Snitcher</string>
+  <string name="category">Category:</string>
+  <string name="report_details">Report Details</string>
+  <string name="send_report">Send Report</string>
+  <string name="password">Password</string>
+  <string name="confirm_password">Confirm Password</string>
+  <string name="login">Login</string>
+  <string name="signup">Sign up</string>
+</resources>

@@ -1,0 +1,63 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/card_view"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_margin="5dp"
+  android:clickable="true"
+  android:focusable="true"
+  android:foreground="?android:attr/selectableItemBackground"
+  app:cardCornerRadius="4dp"
+  app:cardElevation="2dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+      android:id="@+id/itemImage"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:contentDescription="@string/pet_photo_content_description"
+      android:scaleType="centerCrop"
+      android:src="@mipmap/ic_launcher"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.77" />
+
+    <TextView
+      android:id="@+id/itemName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="0dp"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/itemDate"
+      app:layout_constraintStart_toEndOf="@+id/itemImage"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="test" />
+
+    <TextView
+      android:id="@+id/itemDate"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:paddingTop="0dp"
+      android:paddingStart="10dp"
+      android:paddingEnd="10dp"
+      android:textSize="16sp"
+      app:layout_constraintStart_toStartOf="@+id/itemName"
+      app:layout_constraintTop_toBottomOf="@+id/itemName"
+      tools:text="New" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

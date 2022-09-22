@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+  package="com.raywenderlich.android.snitcher"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <permission
+    android:name="com.raywenderlich.android.snitcher.permission.REPORT_DETAIL_ACTIVITY"
+    android:label="@string/permissionsLabel"
+    android:description="@string/permissionDetail"
+    android:protectionLevel="signature" />
+
+  <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+  <application
+    android:allowBackup="false"
+    android:icon="@mipmap/ic_launcher"
+    android:installLocation="internalOnly"
+    android:label="@string/app_name"
+    android:name="com.raywenderlich.android.snitcher.SnitcherApplication"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    tools:ignore="GoogleAppIndexingWarning">
+
+    <!-- Splash Activity -->
+    <activity android:name="com.raywenderlich.android.snitcher.ui.SplashActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <!-- Main Activity -->
+    <activity android:name="com.raywenderlich.android.snitcher.ui.MainActivity"
+      android:noHistory="true"
+      android:excludeFromRecents="true"/>
+
+    <!-- Report List Activity -->
+    <activity android:name="com.raywenderlich.android.snitcher.ui.ReportListActivity"/>
+
+    <!-- Detail Activity -->
+    <activity android:name="com.raywenderlich.android.snitcher.ui.ReportDetailActivity"
+      android:permission="com.raywenderlich.android.snitcher.permission.REPORT_DETAIL_ACTIVITY" >
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.EDIT" />
+        <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </activity>
+
+    <provider
+      android:name="androidx.core.content.FileProvider"
+      android:authorities="com.raywenderlich.android.snitcher.fileprovider"
+      android:exported="false"
+      android:grantUriPermissions="true">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths" />
+    </provider>
+
+  </application>
+
+</manifest>

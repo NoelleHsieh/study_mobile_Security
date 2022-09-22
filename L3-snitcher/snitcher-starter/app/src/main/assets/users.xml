@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <user>
+    <name>Anonymous User</name>
+    <extra>Normal user account</extra>
+    <id>0</id>
+    <password>0</password>
+  </user>
+  <user>
+    <name>Admin</name>
+    <extra>Admin Password: 123456</extra>
+    <id>1</id>
+    <password>0</password>
+  </user>
+  <user>
+    <name>InterPol Test Account</name>
+    <extra>CrimeStoppers Ref# 18321, token: 4hf75jgufhdurhfyt768tugj4ir9t8u6</extra>
+    <id>2</id>
+    <password>0</password>
+  </user>
+  <user>
+    <name>SPCA Test Account</name>
+    <extra>Line # 143271, Account # 0001spca</extra>
+    <id>3</id>
+    <password>0</password>
+  </user>
+</users>

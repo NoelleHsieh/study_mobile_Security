@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">PetMed</string>
+  <string name="pet_photo_content_description">Pet Photo</string>
+</resources>

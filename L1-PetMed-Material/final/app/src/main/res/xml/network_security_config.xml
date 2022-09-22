@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="false">
+    <domain includeSubdomains="true">github.io</domain>
+    <pin-set>
+      <!--Note: These values may change over time, so be sure to use the values that you obtained from the ssllabs lookup that you did as part of this tutorial -->
+      <pin digest="SHA-256">xlDAST56PmiT3SR0WdFOR3dghwJrQ8yXx6JLSqTIRpk=</pin>
+      <pin digest="SHA-256">k2v657xBsOVe1PQRwOsHsw3bsGT2VzIqz5K+59sNQws=</pin>
+    </pin-set>
+    <trustkit-config enforcePinning="true" />
+  </domain-config>
+</network-security-config>
